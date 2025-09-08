@@ -257,21 +257,15 @@ export default function Home() {
             className="mt-16 grid grid-cols-3 gap-8 max-w-md mx-auto"
           >
             <div className="text-center">
-              <div className="text-3xl font-bold text-primary">
-                50K+
-              </div>
+              <div className="text-3xl font-bold text-primary">50K+</div>
               <div className="text-gray-600">Books Sold</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-secondary">
-                25K+
-              </div>
+              <div className="text-3xl font-bold text-secondary">25K+</div>
               <div className="text-gray-600">Students</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-primary">
-                100+
-              </div>
+              <div className="text-3xl font-bold text-primary">100+</div>
               <div className="text-gray-600">Videos</div>
             </div>
           </motion.div>
@@ -290,11 +284,11 @@ export default function Home() {
       {/* Courses Section */}
       <CoursesSection />
 
-  {/* Contact Section */}
-  <ContactSection />
+      {/* Contact Section */}
+      <ContactSection />
 
-  {/* Site footer (moved to component) */}
-  <Footer />
+      {/* Site footer (moved to component) */}
+      <Footer />
     </div>
   );
 }
@@ -509,9 +503,7 @@ function BookCard({
         <h3 className="text-2xl font-bold mb-3 text-gray-800">{book.title}</h3>
         <p className="text-gray-600 mb-4 leading-relaxed">{book.description}</p>
         <div className="flex justify-between items-center mb-4">
-          <span className="text-2xl font-bold text-primary">
-            {book.price}
-          </span>
+          <span className="text-2xl font-bold text-primary">{book.price}</span>
           <div className="flex items-center gap-1">
             {[...Array(5)].map((_, i) => (
               <Star
@@ -669,7 +661,7 @@ function VideoCard({
             transition: "transform 0.1s ease-out",
           }}
         />
-            <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-all duration-300 flex items-center justify-center">
+        <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-all duration-300 flex items-center justify-center">
           <div className="w-16 h-16 bg-white/90 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
             <Play className="w-6 h-6 text-primary ml-1" />
           </div>
@@ -679,7 +671,7 @@ function VideoCard({
         </div>
       </div>
       <div className="p-6">
-  <h3 className="text-xl font-bold mb-2 text-gray-800 group-hover:text-primary transition-colors">
+        <h3 className="text-xl font-bold mb-2 text-gray-800 group-hover:text-primary transition-colors">
           {video.title}
         </h3>
         <p className="text-gray-500">{video.views}</p>
@@ -992,8 +984,14 @@ function ContactSection() {
           </div>
         </motion.div>
 
-      {/* small non-white separator to visually separate the contact card from the footer */}
-      <div className="w-full h-2" style={{ background: "linear-gradient(135deg, rgba(6,12,31,0.9), rgba(6,12,31,0.8))" }} />
+        {/* small non-white separator to visually separate the contact card from the footer */}
+        <div
+          className="w-full h-2"
+          style={{
+            background:
+              "linear-gradient(135deg, rgba(6,12,31,0.9), rgba(6,12,31,0.8))",
+          }}
+        />
       </div>
     </section>
   );

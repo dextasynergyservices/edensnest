@@ -15,7 +15,8 @@ export default function Footer() {
     <footer
       className="mt-0"
       style={{
-        background: "linear-gradient(135deg, rgba(25,135,135,1) 0%, rgba(6,12,31,1) 100%)",
+        background:
+          "linear-gradient(135deg, rgba(25,135,135,1) 0%, rgba(6,12,31,1) 100%)",
       }}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
