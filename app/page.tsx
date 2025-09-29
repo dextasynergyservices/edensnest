@@ -183,12 +183,12 @@ export default function Home() {
       {/* Hero Section */}
       <section
         id="hero"
-        className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8"
+        className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 md:pb-10 lg:pb-10"
         style={{
           // offset for fixed navbar using paddingTop so the hero portrait isn't covered
           paddingTop: "4rem",
           backgroundImage:
-            "linear-gradient(rgba(255,255,255,0.82), rgba(255,255,255,0.6)), url('https://images.pexels.com/photos/3184637/pexels-photo-3184637.jpeg?auto=compress&cs=tinysrgb&w=1600')",
+            "linear-gradient(rgba(255,255,255,0.82), rgba(255,255,255,0.6)), url('/hero_bg.png')",
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
@@ -203,7 +203,7 @@ export default function Home() {
           >
             <div ref={heroImageScale.elementRef} className="relative z-10">
               <motion.img
-                src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=600"
+                src="/hero_image.png"
                 alt="Edens Nest"
                 className="w-48 h-48 rounded-2xl mx-auto mb-6 border-4 border-white shadow-2xl object-cover"
                 style={{
@@ -328,11 +328,11 @@ function AboutSection() {
             ref={aboutImageScale.elementRef}
             className="w-full"
           >
-            <div className="relative w-full max-h-96 overflow-hidden">
+            <div className="relative w-full max-h-full overflow-hidden">
               <motion.img
-                src="https://images.pexels.com/photos/3796217/pexels-photo-3796217.jpeg?auto=compress&cs=tinysrgb&w=800"
+                src="/about.png"
                 alt="Edens Nest speaking"
-                className="w-full h-80 object-cover rounded-2xl shadow-2xl"
+                className="w-full h-full object-cover rounded-2xl shadow-2xl"
                 style={{
                   scale: aboutImageScale.scale,
                   transition: "transform 0.1s ease-out",
@@ -387,33 +387,33 @@ function BooksSection() {
 
   const books = [
     {
-      title: "Unleash Your Potential",
+      title: "Know You, Choose Better",
       description:
         "A comprehensive guide to discovering and maximizing your inner strength.",
       price: "$19.99",
-      selarLink: "https://selar.co/unleash-potential",
+      selarLink: "#",
       image:
-        "https://images.pexels.com/photos/1029141/pexels-photo-1029141.jpeg?auto=compress&cs=tinysrgb&w=400",
+        "/book1.png",
       badge: "Bestseller",
     },
     {
-      title: "The Success Mindset",
+      title: "The ABC of Family Bonding",
       description:
         "Transform your thinking patterns to achieve extraordinary results.",
       price: "$24.99",
       selarLink: "https://selar.co/success-mindset",
       image:
-        "https://images.pexels.com/photos/1029140/pexels-photo-1029140.jpeg?auto=compress&cs=tinysrgb&w=400",
+        "/book2.png",
       badge: "New Release",
     },
     {
-      title: "Building Wealth Habits",
+      title: "Happy Family Secrets",
       description:
         "Daily practices that millionaires use to create lasting wealth.",
       price: "$29.99",
       selarLink: "https://selar.co/wealth-habits",
       image:
-        "https://images.pexels.com/photos/1029142/pexels-photo-1029142.jpeg?auto=compress&cs=tinysrgb&w=400",
+        "/book3.png",
       badge: "Popular",
     },
   ];
@@ -472,7 +472,7 @@ function BookCard({
   index: number;
   inView: boolean;
 }) {
-  const bookImageScale = useScrollScale(1, 0.4);
+  const bookImageScale = useScrollScale(1, 0.1);
 
   return (
     <motion.div
@@ -487,7 +487,7 @@ function BookCard({
         <motion.img
           src={book.image}
           alt={book.title}
-          className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300"
+          className="w-full h-auto object-cover group-hover:scale-110 transition-transform duration-300"
           style={{
             scale: bookImageScale.scale,
             transition: "transform 0.1s ease-out",
@@ -688,7 +688,7 @@ function CoursesSection() {
 
   const courses = [
     {
-      title: "Life Transformation Masterclass",
+      title: "Love Life Secrets",
       description:
         "A comprehensive 8-week program designed to help you create lasting change in every area of your life.",
       price: "$497",
@@ -703,10 +703,10 @@ function CoursesSection() {
         "Lifetime access",
       ],
       image:
-        "https://images.pexels.com/photos/3990842/pexels-photo-3990842.jpeg?auto=compress&cs=tinysrgb&w=600",
+        "course.png",
     },
     {
-      title: "Business Growth Accelerator",
+      title: "Bonding Made Simple",
       description:
         "Scale your business from 6 to 7 figures with proven strategies and systems.",
       price: "$997",
@@ -721,7 +721,43 @@ function CoursesSection() {
         "Marketing strategies",
       ],
       image:
-        "https://images.pexels.com/photos/3990845/pexels-photo-3990845.jpeg?auto=compress&cs=tinysrgb&w=600",
+        "course2.png",
+    },
+    {
+      title: "Conflict Resolution",
+      description:
+        "Master the art of resolving conflicts and building stronger relationships.",
+      price: "$997",
+      originalPrice: "$1,497",
+      students: "1,523",
+      rating: "4.8",
+      selarLink: "https://selar.co/business-accelerator",
+      features: [
+        "12 modules",
+        "1-on-1 coaching call",
+        "Business templates",
+        "Marketing strategies",
+      ],
+      image:
+        "course3.png",
+    },
+    {
+      title: "Parenting 101",
+      description:
+        "A comprehensive guide to understanding and nurturing your child's development.",
+      price: "$997",
+      originalPrice: "$1,497",
+      students: "1,523",
+      rating: "4.8",
+      selarLink: "https://selar.co/business-accelerator",
+      features: [
+        "12 modules",
+        "1-on-1 coaching call",
+        "Business templates",
+        "Marketing strategies",
+      ],
+      image:
+        "course4.png",
     },
   ];
 
@@ -754,7 +790,7 @@ function CoursesSection() {
           }}
           initial="initial"
           animate={inView ? "animate" : "initial"}
-          className="grid lg:grid-cols-2 gap-8"
+          className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
           {courses.map((course, index) => (
             <CourseCard
@@ -794,7 +830,7 @@ function CourseCard({
         <motion.img
           src={course.image}
           alt={course.title}
-          className="w-full h-56 object-cover"
+          className="w-full h-80 object-cover bg-gray-50"
           style={{
             scale: courseImageScale.scale,
             transition: "transform 0.1s ease-out",
