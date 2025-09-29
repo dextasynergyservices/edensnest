@@ -6,14 +6,14 @@ export default function Footer() {
   const year = new Date().getFullYear();
 
   const links = [
-    { label: "Privacy Policy", href: "/privacy" },
-    { label: "Terms of Service", href: "/terms" },
-    { label: "Sitemap", href: "/sitemap.xml" },
+    { label: "Privacy Policy", href: "/" },
+    { label: "Terms of Service", href: "/" },
+    { label: "Sitemap", href: "/" },
   ];
 
   return (
     <footer
-      className="mt-0"
+      className="mt-0 pb-8"
       style={{
         background:
           "linear-gradient(135deg, rgba(25,135,135,1) 0%, rgba(6,12,31,1) 100%)",
