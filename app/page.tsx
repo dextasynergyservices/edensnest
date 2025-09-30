@@ -218,7 +218,7 @@ export default function Home() {
             {...fadeInUp}
             className="text-5xl md:text-7xl font-bold mb-6 text-primary"
           >
-            Transform Your Life
+            FAMILIES THAT THRIVE
           </motion.h1>
 
           <motion.p
@@ -226,9 +226,7 @@ export default function Home() {
             transition={{ delay: 0.2, duration: 0.6 }}
             className="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed"
           >
-            Bestselling author, course creator, and life transformation coach
-            helping thousands achieve their dreams through proven strategies and
-            inspiring content.
+            At Eden&apos;s Nest, we believe the family is the cradle of society, a safe haven where roots grow deep, love thrives, and future generations are shaped.
           </motion.p>
 
           <motion.div
@@ -314,9 +312,9 @@ function AboutSection() {
             About Edens Nest
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            With over a decade of experience in personal development and
-            business coaching, I&apos;ve dedicated my life to helping others
-            unlock their full potential.
+            Eden&apos;s Nest is a nurturing faith-based platform dedicated to strengthening families through growth, connection, and purpose.
+We provide workshops, coaching, speaking engagements, and conversations that inspire individuals and families to thrive. 
+At Eden&apos;s Nest, we believe strong families are the foundation of a stronger society.
           </p>
         </motion.div>
 
@@ -347,12 +345,9 @@ function AboutSection() {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="space-y-6 relative z-10"
           >
-            <h3 className="text-3xl font-bold text-gray-800">My Journey</h3>
+            <h3 className="text-3xl font-bold text-gray-800">The Founder</h3>
             <p className="text-gray-600 leading-relaxed">
-              From struggling entrepreneur to bestselling author, my journey has
-              been filled with challenges that shaped me into the mentor I am
-              today. I believe everyone has the power to create extraordinary
-              change in their lives.
+              Adedoyin Omoniyi-Ojo is a passionate family life advocate, speaker, and coach. She is the founder of Eden’s Nest, a nurturing platform dedicated to helping individuals and families grow in faith, connection, and purpose. With a heart for strengthening homes, she believes that families are the bedrock of society and that when we build strong bonds at home, we build a stronger future for generations to come.
             </p>
             <div className="grid grid-cols-2 gap-4">
               <div className="flex items-center gap-3">
@@ -535,7 +530,7 @@ function VideosSection() {
 
   const videos = [
     {
-      title: "Morning Routine for Success",
+      title: "Family Bonding Made Easy",
       views: "125K views",
       duration: "12:34",
       thumbnail:
@@ -543,7 +538,7 @@ function VideosSection() {
       url: "https://youtube.com/watch?v=example1",
     },
     {
-      title: "Building Confidence Daily",
+      title: "Raising  Safe, Loved, and Confident Kids",
       views: "89K views",
       duration: "8:45",
       thumbnail:
@@ -551,7 +546,7 @@ function VideosSection() {
       url: "https://youtube.com/watch?v=example2",
     },
     {
-      title: "Financial Freedom Blueprint",
+      title: "Marriage & Bonding",
       views: "156K views",
       duration: "15:22",
       thumbnail:
@@ -559,7 +554,7 @@ function VideosSection() {
       url: "https://youtube.com/watch?v=example3",
     },
     {
-      title: "Productivity Masterclass",
+      title: "Back-to-School Conversations That Build Trust With Your Kids",
       views: "203K views",
       duration: "18:11",
       thumbnail:
